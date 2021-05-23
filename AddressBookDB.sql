@@ -40,3 +40,8 @@ insert into AddressBook values
 select COUNT(firstname) from AddressBook where city = 'Memphis' or state = 'Tennessee'
 
 select * from AddressBook where city = 'Memphis' order by firstname 
+
+ALTER TABLE AddressBook 
+ADD type varchar(150),
+	name varchar(100)
+select * from AddressBook
