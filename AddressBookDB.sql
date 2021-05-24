@@ -50,3 +50,7 @@ update AddressBook set type = 'Colleague', name = 'Office' where firstname = 'Ja
 select * from AddressBook
 
 select COUNT(firstname) from AddressBook where type = 'Friend'
+
+ALTER TABLE addressbook 
+DROP name;
+select * from AddressBook;
