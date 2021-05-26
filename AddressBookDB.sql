@@ -44,13 +44,17 @@ select * from AddressBook where city = 'Memphis' order by firstname
 ALTER TABLE AddressBook 
 ADD type varchar(150),
 	name varchar(100)
-update AddressBook set type = 'Friend', name = 'FriendsBook' where firstname in ('Matthew','David','Tyler','Janice','Liam');
-update AddressBook set type = 'Family', name = 'FamilyBook' where firstname in ('Ismael','Byron');
-update AddressBook set type = 'Colleague', name = 'Office' where firstname = 'James'
+update AddressBook set type = 'Friend', AddressBookName = 'FriendsBook' where firstname in ('Matthew','David','Tyler','Janice','Liam');
+update AddressBook set type = 'Family', AddressBookName = 'FamilyBook' where firstname in ('Ismael','Byron');
+update AddressBook set type = 'Colleague', AddressBookName = 'Office' where firstname = 'James'
 select * from AddressBook
 
 select COUNT(firstname) from AddressBook where type = 'Friend'
 
 ALTER TABLE addressbook 
-DROP name;
-select * from AddressBook;
+DROP AddressBookID;
+
+
+ALTER TABLE AddressBook 
+ADD AddressBookName varchar(100)
+
